@@ -5,8 +5,6 @@ const Home = () => {
     
    
       <ButtonAppBar />
-   
-
     
   )
   
