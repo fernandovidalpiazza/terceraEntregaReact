@@ -28,9 +28,9 @@ export default function ButtonAppBar() {
    
           </Typography>
           
-          <Button color="inherit">Promiciones</Button>
-          <Button color="inherit"> Remeras traidas de usa </Button>
-          <Button color="inherit"> Remeras exclusivas  </Button>
+          <Button color="inherit">Promociones</Button>
+          <Button color="inherit"> Remeras Made in U.S.A </Button>
+          <Button color="inherit"> Modelos Exclusivos  </Button>
           <SimpleBadge /> 
 
         
