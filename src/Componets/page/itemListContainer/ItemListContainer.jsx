@@ -1,10 +1,21 @@
+import { useState } from "react"
+
+import ItemList from "./ItemList"
 
 
-
-const ItemListContainer = (  {greeting }) => {
+ 
+  const ItemListContainer = () => {
+    const [products , setProducts] = useState([])
+    const [ edad , setEdad] = useState(20)
     return (
-      <div> <h1> {greeting}   </h1> </div>
+      < ItemList edad = {edad} setEdad ={setEdad} />
     )
   }
   
   export default ItemListContainer
+
+
+
+
+
+

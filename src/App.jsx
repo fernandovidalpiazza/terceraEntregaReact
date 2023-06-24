@@ -1,16 +1,14 @@
-
-import Home from "./Componets/page/home/Home"
 import ItemListContainer from "./Componets/page/itemListContainer/ItemListContainer"
+import ButtonAppBar from "./Componets/layout/navbar/ButtonAppBar";
+
 
 function App() {
   return (
     <div>
+      <ButtonAppBar />
+      <ItemListContainer /> 
       
-      <Home /> 
-    
-      <div style={{  display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <ItemListContainer greeting="Importa tus Remeras desde USA"  />
-      </div>
+      
     </div>
   );
 };
