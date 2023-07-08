@@ -1,21 +1,31 @@
-import { useState } from "react"
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList";
+import { products } from "../../../productsMock";
 
-import ItemList from "./ItemList"
+import {useParams} from "react-router-dom"
 
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
 
- 
-  const ItemListContainer = () => {
-    const [products , setProducts] = useState([])
-    const [ edad , setEdad] = useState(20)
-    return (
-      < ItemList edad = {edad} setEdad ={setEdad} />
-    )
-  }
-  
-  export default ItemListContainer
+  const {categoryName} = useParams()
 
+  useEffect(() => {
 
+    let productosFiltrados = products.filter( elemento => elemento.category === categoryName)
 
+    const tarea = new Promise((resolve, reject) => {
+      resolve( categoryName ? productosFiltrados : products );
+      // reject("salio todo mal")
+    });
 
+    tarea
+      .then((respuesta) => setItems(respuesta))
+      .catch((error) => console.log(error));
 
+    // .finally(()=>console.log("hola"))
+  }, [categoryName]);
 
+  return <ItemList items={items} />;
+};
+
+export default ItemListContainer;

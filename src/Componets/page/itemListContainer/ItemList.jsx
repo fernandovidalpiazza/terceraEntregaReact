@@ -1,15 +1,22 @@
+import ProductCar from "../../common/productcar/Productcar";
 
 
-const ItemList = ({ edad,  setEdad} ) => {
-    return (
-       
-     
-     <div>
-        <h1> Aca va los items</h1>
-        <h2>{edad}</h2>
-        <button onClick={()=>setEdad (edad + 1)}>suma edad</button>
-     </div>
-     ) 
-  }
-
-  export default ItemList
+const ItemList = ({ items }) => {
+  return (
+    <section
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "space-evenly",
+        flexWrap: "wrap",
+        paddingTop: "55px"
+      }}
+    >
+      {items.map((item) => {
+        return <ProductCar key={item.id} item={item} />;
+      })}
+    </section>
+  
+  );
+};
+export default ItemList;

@@ -1,0 +1,9 @@
+.items {
+    width: 500000px;
+    height: 200px;
+    border: 100px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  
