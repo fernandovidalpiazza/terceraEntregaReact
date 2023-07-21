@@ -1,16 +1,16 @@
+// Counter.jsx
+import React from "react";
 
-
-const Counter = ({counter, SetCounter,  agregarAlcarrito,stock }) => {
+const Counter = ({ counter, setCounter, agregarAlCarrito, stock }) => {
   return (
     <div>
-        <button disabled = {counter < 2 } onClick={()=>SetCounter (counter - 1)}> - </button>
-        <button> {counter} </button>
-        <button disabled = {counter >=stock } onClick={() => SetCounter(counter + 1)}>+</button>
-
-
-        <button onClick={()=> agregarAlcarrito (counter)}>Agregar al Carrito </button>
+      <button disabled={counter < 2} onClick={() => setCounter(counter - 1)}> - </button>
+      <button> {counter} </button>
+      <button disabled={counter >= stock} onClick={() => setCounter(counter + 1)}>+</button>
+      <button onClick={() => agregarAlCarrito(counter)}>Agregar al Carrito </button>
     </div>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;
+

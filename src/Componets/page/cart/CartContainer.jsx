@@ -1,18 +1,48 @@
+import { createContext, useState } from "react";
 
-import Button from "@mui/material/Button";
+export const CartContext = createContext();
 
-import {Link} from "react-router-dom"
+const CartContextComponent = ({ children }) => {
+  const [cart, setCart] = useState([]);
 
+  // 5
+  const addToCart = (product) => {
+    let existe = cart.some((elemento) => elemento.id === product.id);
+    if (existe) {
+      let newArr = cart.map((elemento) => {
+        if (product.id === elemento.id) {
+          return {
+            ...elemento,
+            quantity: elemento.quantity + product.quantity,
+          };
+        } else {
+          return elemento;
+        }
+      });
 
-const CartContainer = () => {
-  return (
-    <div><h1>estoy en el carro</h1></div>,
-    <Link to ={`chekoutContainer/`}>
-    <Button size="small" variant="contained">
-      chekaut
-    </Button>
-  </Link>
-  )
-}
+      setCart(newArr);
+    } else {
+      setCart([...cart, product]);
+    }
+  };
 
-export default CartContainer
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  const deleteById = (id) => {
+    let newArr = cart.filter((elemento) => elemento.id !== id);
+    setCart(newArr);
+  };
+
+  let data = {
+    cart,
+    addToCart,
+    clearCart,
+    deleteById,
+  };
+
+  return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
+};
+
+export default CartContextComponent;
