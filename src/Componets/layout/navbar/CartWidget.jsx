@@ -6,11 +6,12 @@ import { useContext } from 'react';
 import { CartContext } from "../../context/CartContex";
 
 export default function SimpleBadge() {
-  const { cart } = useContext(CartContext); 
+  const {  getTotalQuantity } = useContext(CartContext); 
+  let total =  getTotalQuantity ()
 
   return (
     <Link to="cart">
-      <Badge badgeContent={cart.length} color="primary" showZero >
+      <Badge badgeContent={total} color="primary"  >
         <ShoppingCartIcon color="witeh" />
       </Badge>
     </Link>
