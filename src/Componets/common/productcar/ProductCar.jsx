@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const ProductCar = ({ item }) => {
   return (
@@ -20,7 +20,7 @@ const ProductCar = ({ item }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link to ={`/itemDetail/${item.id}`}>
+        <Link to={`/itemDetail/${item.id}`}>
           <Button size="small" variant="contained">
             ver mas
           </Button>
