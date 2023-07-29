@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-import { products } from "../../../productsMock";
+
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../context/CartContex";
+import { db } from "../../../firebaseConfig";
+import { getDoc, collection, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -14,12 +16,12 @@ const ItemDetailContainer = () => {
   let cantidadEnCarro = getQuantityById(id);
 
   useEffect(() => {
-    let promesa = new Promise((resolve, reject) => {
-      let productSelected = products.find((product) => product.id === +id);
-      resolve(productSelected);
-    });
+    let refColletion = collection (db, "products")
+   let refDoc = doc(refColletion, id)
+   getDoc (refDoc).then (res=> setProduct ({...res.data (),id:res.id}))
+     
 
-    promesa.then((res) => setProduct(res)).catch((err) => console.log(err));
+
   }, [id]);
 
   const agregarAlCarrito = (cantidad) => {

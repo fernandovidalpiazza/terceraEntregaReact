@@ -1,13 +1,25 @@
 
+import './footer.css'
 
-
-const footer = () => {
+const Footer = () => {
   return (
-    <div>
-        <h2>este es el footer</h2>
-    </div>
-  )
-}
+    <footer className="footer-container">
+      <div className="footer-info">
+        <h3>Importalo</h3>
+        <p>Tel: 3356-4556</p>
+        <p>Dirección: Av. Mitre 1518, Buenos Aires</p>
+      </div>
+      <div className="footer-buttons">
+        {/* Botones de redes sociales u otros enlaces */}
+        <a href="https://www.facebook.com/importalo" target="_blank" rel="noopener noreferrer">
+          <button className="facebook-button">Facebook</button>
+        </a>
+        <a href="https://www.instagram.com/importalo" target="_blank" rel="noopener noreferrer">
+          <button className="instagram-button">Instagram</button>
+        </a>
+      </div>
+    </footer>
+  );
+};
 
-
-export default footer
+export default Footer;
