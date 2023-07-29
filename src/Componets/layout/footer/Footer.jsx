@@ -10,7 +10,7 @@ const Footer = () => {
         <p>Dirección: Av. Mitre 1518, Buenos Aires</p>
       </div>
       <div className="footer-buttons">
-        {/* Botones de redes sociales u otros enlaces */}
+       
         <a href="https://www.facebook.com/importalo" target="_blank" rel="noopener noreferrer">
           <button className="facebook-button">Facebook</button>
         </a>

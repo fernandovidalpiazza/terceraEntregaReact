@@ -1,0 +1,52 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form__input {
+    margin-bottom: 15px;
+  }
+  
+  .form__button {
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form__button:hover {
+    background-color: #ff5500;
+  }
+  
+  .form__error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Add any other marketing-inspired CSS styles you'd like */
+  
