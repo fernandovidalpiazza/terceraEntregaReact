@@ -11,6 +11,8 @@ function App() {
         <AppRouter />
       </CartContextComponent>
     </BrowserRouter>
+
+
   );
 }
 

@@ -44,7 +44,7 @@ export default function ButtonAppBar() {
         </Toolbar>
       </AppBar>
 
-      <Outlet />
+      
     </Box>
   );
 }
