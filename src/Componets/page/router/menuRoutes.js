@@ -1,7 +1,7 @@
 import ItemDetailContainer from "../../../Componets/page/itemDetail/ItemDetailContainer";
 import ItemListContainer from "../../../Componets/page/itemListContainer/ItemListContainer"
 import CartContainer from "../../../Componets/page/cart/CartContainer";
-import chekoutContainer from "../chekout/chekoutContainer";
+import  CheckoutContainer from "../chekout/ChekoutContainer";
 import NoFound from "../nofound/NoFound";
 
 export const routes = [
@@ -28,9 +28,9 @@ export const routes = [
     },
 
     {
-      id: "checkaut",
-      path: "/cart/chekoutContainer",
-      Element: chekoutContainer,
+      id: "CheckoutContainer",
+      path: "/cart/CheckoutContainer",
+      Element: CheckoutContainer,
     },
 
   

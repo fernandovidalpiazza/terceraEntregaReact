@@ -1,6 +1,7 @@
 import React from "react";
 import "./cart.css";
 import { Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Cart = ({ cartItems, clearCart, deleteItem, totalPrice }) => {
   return (
@@ -23,7 +24,9 @@ const Cart = ({ cartItems, clearCart, deleteItem, totalPrice }) => {
         Limpiar carro
       </Button>
       <Typography className="total"> el total de la compra es: {totalPrice} </Typography>
-      <Button className="purchase-button"> presiona para comprar </Button>
+      <Link to="/cart/CheckoutContainer">
+        <Button className="purchase-button">presiona para comprar</Button>
+      </Link>
     </div>
   );
 };
