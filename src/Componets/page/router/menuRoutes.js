@@ -3,6 +3,7 @@ import ItemListContainer from "../../../Componets/page/itemListContainer/ItemLis
 import CartContainer from "../../../Componets/page/cart/CartContainer";
 import  CheckoutContainer from "../chekout/ChekoutContainer";
 import NoFound from "../nofound/NoFound";
+import { Dashboard } from "../dashboard/Dashboard";
 
 export const routes = [
     {
@@ -31,6 +32,12 @@ export const routes = [
       id: "CheckoutContainer",
       path: "/cart/CheckoutContainer",
       Element: CheckoutContainer,
+    },
+
+    {
+      id: "dashboard",
+      path: "/dashboard",
+      Element: Dashboard,
     },
 
   

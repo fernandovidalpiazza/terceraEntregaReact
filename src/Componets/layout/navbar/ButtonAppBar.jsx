@@ -40,6 +40,10 @@ export default function ButtonAppBar() {
           <Button color="inherit"> Formal </Button>
           </Link>
 
+          <Link to = "/Dashboard" style={{color: "white"}}>
+          <Button color="inherit"> Administrador </Button>
+          </Link>
+
           <SimpleBadge />
         </Toolbar>
       </AppBar>
