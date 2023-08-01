@@ -16,12 +16,9 @@ const ItemDetailContainer = () => {
   let cantidadEnCarro = getQuantityById(id);
 
   useEffect(() => {
-    let refColletion = collection (db, "products")
-   let refDoc = doc(refColletion, id)
-   getDoc (refDoc).then (res=> setProduct ({...res.data (),id:res.id}))
-     
-
-
+    let refColletion = collection(db, "products");
+    let refDoc = doc(refColletion, id);
+    getDoc(refDoc).then((res) => setProduct({ ...res.data(), id: res.id }));
   }, [id]);
 
   const agregarAlCarrito = (cantidad) => {

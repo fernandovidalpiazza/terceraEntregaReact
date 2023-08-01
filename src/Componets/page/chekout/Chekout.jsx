@@ -1,9 +1,8 @@
-// Checkout.jsx
 import { Button, TextField } from "@mui/material";
 import { Message } from "@mui/icons-material";
-import { useOrderContext } from "../../context/OrderContext"
+import { useOrderContext } from "../../context/OrderContext";
 const Checkout = ({ handleChange, handleSubmit, errors }) => {
-  const { orderId } = useOrderContext(); 
+  const { orderId } = useOrderContext();
 
   return (
     <div style={{ padding: "50px" }}>
