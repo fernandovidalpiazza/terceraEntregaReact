@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 
 import AppRouter from "./Componets/page/router/AppRouter";
-
+import { ToastContainer } from "react-toastify";
 import CartContextComponent from "./Componets/context/CartContex";
 import  OrderProvider from "./Componets/context/OrderContext"
 
@@ -13,6 +13,7 @@ function App() {
           <AppRouter />
         </OrderProvider>
       </CartContextComponent>
+      <ToastContainer  />
     </BrowserRouter>
   );
 }
