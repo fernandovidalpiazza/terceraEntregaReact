@@ -1,100 +1,56 @@
-/* Add your Material-UI styles with marketing inspiration here */
+/* cart.css */
 .container {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .item {
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s ease;
-  }
-  
-  .item:hover {
-    transform: scale(1.05);
-  }
-  
-  .price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin: 10px 0;
-  }
-  
-  .quantity {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .button {
-    background-color: #ff6600;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #ff5500;
-  }
-  
-  .empty-cart {
-    color: #888;
-    font-size: 20px;
-    margin-top: 20px;
-  }
-  
-  .total {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  
-  .purchase-button {
-    background-color: #ff3366;
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-  }
-  
-  .purchase-button:hover {
-    background-color: #ff0044;
-  }
-  
-  /* Add any other marketing-inspired CSS styles you'd like */
-  
+  padding: 50px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.quantity {
+  font-size: 16px;
+}
+
+.button {
+  background-color: #e0e0e0;
+  color: #333;
+  margin-top: 10px;
+}
+
+.empty-cart {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.total {
+  font-size: 20px;
+  margin-top: 20px;
+  color: blue;
+}
+
+.purchase-button {
+  background-color: #00cc00;
+  color: #fff;
+  margin-top: 20px;
+}
