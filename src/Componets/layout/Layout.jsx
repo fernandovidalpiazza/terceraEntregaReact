@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import ButtonAppBar from "./navbar/ButtonAppBar";
-import Footer from "./footer/footer"
+import Footer from "./footer/Footer"
 
 const Layout = () => {
   return (
@@ -11,5 +11,8 @@ const Layout = () => {
     </>
   );
 };
+
+
+
 
 export default Layout;
