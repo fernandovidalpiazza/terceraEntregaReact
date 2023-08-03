@@ -1,5 +1,4 @@
 import { BrowserRouter } from "react-router-dom";
-
 import AppRouter from "./Componets/page/router/AppRouter";
 import { ToastContainer } from "react-toastify";
 import CartContextComponent from "./Componets/context/CartContex";
